@@ -11,7 +11,7 @@ class roadwarrior::params {
 
   # TODO: This will (probably) be Debian specific
   # Define the name of the service.
-  $service_strongswan = 'strongswan'
+  $service_strongswan = 'strongswan-starter'
 
   # By default, we should manage the firewall. Ideally the user will be taking
   # advantage of puppetlabs/firewall to manage their ruleset, but if another
