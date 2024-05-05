@@ -17,7 +17,7 @@ class roadwarrior (
   $cert_password        = $::roadwarrior::params::cert_password,
 ) inherits ::roadwarrior::params {
 
-  validate_string( $vpn_dns_servers )
+  assert_type(String, $vpn_dns_servers)
 
   # Compat checks
   if ($::operatingsystem != "Debian" and $::operatingsystem != "Ubuntu") {
@@ -27,7 +27,7 @@ class roadwarrior (
   # Ensure resources is brilliant witchcraft, we can install all the StrongSwan
   # dependencies in a single run and avoid double-definitions if they're already
   # defined elsewhere.
-  ensure_packages([$packages_strongswan], {
+  stdlib::ensure_packages($packages_strongswan, {
     'ensure' => 'present',
     'before' => [ Service[$service_strongswan], File['/etc/ipsec.conf'], File['/etc/ipsec.secrets'] ]
   })
