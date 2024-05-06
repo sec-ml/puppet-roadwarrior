@@ -80,6 +80,20 @@ as the IP range to route back to the client devices.
        vpn_route_v4       => '192.168.0.0/16',
      }
 
+Any destination within `vpn_route_v4` CIDR range with route through the VPN.
+To route **all** traffic through it, set this to `0.0.0.0/0`. Make sure you also
+set `vpn_dns_servers` to either your internal DNS server (if you wish to access
+anything in your network via DNS name) or to external public DNS server(s).
+
+    class { 'roadwarrior':
+       manage_firewall_v4 => true,
+       manage_firewall_v6 => true,
+       vpn_name           => 'vpn.example.com',
+       vpn_range_v4       => '10.10.10.0/24',
+       vpn_route_v4       => '0.0.0.0/0',
+       vpn_dns_servers    => '1.1.1.1,8.8.8.8',
+     }
+
 It is recommended that you consider backing up the `/etc/ipsec.d` directory. If
 replacing/autoscaling the server running your roadwarror VPN, you will want to
 populate the directory with the same data across the fleet, otherwises certs would
