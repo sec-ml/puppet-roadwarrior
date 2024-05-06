@@ -18,18 +18,18 @@ class roadwarrior::firewall (
 
     # Standard IPSec port
     firewall { '100 V4 Permit StrongSwan 500':
-      provider => 'iptables',
+      protocol => 'iptables',
       proto    => 'udp',
       dport    => '500',
-      action   => 'accept',
+      jump     => 'accept',
     }
 
     # NAT-friendly IPSec port
     firewall { '100 V4 Permit StrongSwan 4500':
-      provider => 'iptables',
+      protocol => 'iptables',
       proto    => 'udp',
       dport    => '4500',
-      action   => 'accept',
+      jump     => 'accept',
     }
   }
 
@@ -46,18 +46,18 @@ class roadwarrior::firewall (
 
     # Standard IPSec port
     firewall { '100 V6 Permit StrongSwan 500':
-      provider => 'ip6tables',
+      protocol => 'ip6tables',
       proto    => 'udp',
       dport    => '500',
-      action   => 'accept',
+      jump     => 'accept',
     }
 
     # NAT-friendly IPSec port
     firewall { '100 V6 Permit StrongSwan 4500':
-      provider => 'ip6tables',
+      protocol => 'ip6tables',
       proto    => 'udp',
       dport    => '4500',
-      action   => 'accept',
+      jump     => 'accept',
     }
   }
 
