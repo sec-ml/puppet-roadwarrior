@@ -1,11 +1,11 @@
 # puppet-roadwarrior
 
-The year is 2016. Giant clouds rule the internet. Microsoft supports linux. Yet
+The year is 2016. Giant clouds rule the internet. Microsoft supports Linux. Yet
 in this strange new world, not all is well. Your home network is still stuck
 behind an IPv4 NAT gateway. And your apps still haven't all figured out how to
 do secure HTTPS encrypted connections yet.
 
-But wait! There in the distance... a savior emerges! The Road Warror VPN!
+But wait! There in the distance... a savior emerges! The Road Warrior VPN!
 
 This module sets up a StrongSwan-based IKEv2 VPN suitable for use with the
 native IKEv2 VPN client available on devices like iOS and Android, as well as
@@ -15,10 +15,21 @@ It intentionally tries not to do everything for everyone, the module is smart
 in some areas (eg automatic generation of keys/certs) but dumb in other areas
 (eg limited configurability to keep things simple for users).
 
-If you're wanting the simpliest possible way to configure a VPN for your iOS
+If you're wanting the simplest possible way to configure a VPN for your iOS
 or Android device this is the module for you. If you want a module that exposes
 every possible StrongSwan option, it's not.
 
+... time passes ...
+
+It's now the future, 2024 to be precise. Some stuff happened between 2016 and
+now, but I wouldn't look too deeply into it if I were you... just pretend
+everything is fine.
+
+One big change, it's now really easy to connect to devices securely without a
+RoadWarrior VPN... haha, only kidding. But there are at least lots of other
+options to make it simple to create and manage configs... haha, got you again.
+
+**You still need this.**
 
 # Features
 
