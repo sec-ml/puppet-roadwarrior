@@ -31,25 +31,25 @@ every possible StrongSwan option, it's not.
 
 # Compatibility
 
-~~Tested and confirmed on:
+~~Tested and confirmed on:~~
 
-* Debian 8/Jessie [Server]
-* Debian 9/Stretch [Server]
-* Ubuntu 16.04 [Server]
-* iOS 9.3.1 [Client]
-* iOS 10.0.1 [Client]
-* iOS 11.4.1 [Client]
-* MacOS X 10.11.4 [Client]
-* Android 5 w/ StrongSwan [Client]
+~~* Debian 8/Jessie [Server]~~
+~~* Debian 9/Stretch [Server]~~
+~~* Ubuntu 16.04 [Server]~~
+~~* iOS 9.3.1 [Client]~~
+~~* iOS 10.0.1 [Client]~~
+~~* iOS 11.4.1 [Client]~~
+~~* MacOS X 10.11.4 [Client]~~
+~~* Android 5 w/ StrongSwan [Client]~~
 
 
-The VPN *should* work on any OS released in 2015-2016 onwards, but many
+~~The VPN *should* work on any OS released in 2015-2016 onwards, but many
 earlier OS releases didn't ship with IKEv2 VPN support. The following are
-known minimum versions for working clients:
+known minimum versions for working clients:~~
 
-* iOS 9+
-* MacOS X 10.11 (El Capitan)
-* Android 4.4.3+ (with use of third party StrongSwan client)~~
+~~* iOS 9+~~
+~~* MacOS X 10.11 (El Capitan)~~
+~~* Android 4.4.3+ (with use of third party StrongSwan client)~~
 
 Uncertain on above compatibility.
 
