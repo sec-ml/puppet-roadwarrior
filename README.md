@@ -249,8 +249,6 @@ The following is an example of how to do this:
 
     Note: apt-get install puppet installs an older version of Puppet (v5.x).
 
-    ~~apt-get install puppet~~
-
     apt-get update && apt-get upgrade -y
     apt-get install ruby
 
