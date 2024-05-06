@@ -31,7 +31,7 @@ every possible StrongSwan option, it's not.
 
 # Compatibility
 
-Tested and confirmed on:
+~~Tested and confirmed on:
 
 * Debian 8/Jessie [Server]
 * Debian 9/Stretch [Server]
@@ -49,7 +49,13 @@ known minimum versions for working clients:
 
 * iOS 9+
 * MacOS X 10.11 (El Capitan)
-* Android 4.4.3+ (with use of third party StrongSwan client)
+* Android 4.4.3+ (with use of third party StrongSwan client)~~
+
+Uncertain on above compatibility.
+
+Tested and confirmed on:
+
+* Ubuntu 22.04 [Server]
 
 
 
