@@ -56,8 +56,14 @@ Uncertain on above compatibility.
 Tested and confirmed on:
 
 * Ubuntu 22.04 [Server]
+     - strongswan/jammy-updates,jammy-security 5.9.5-2ubuntu2.2 all
+     - ruby 3.0.2p107 (2021-07-07 revision 0db68f0233) [x86_64-linux-gnu]
+     - Puppet: 7.30.0  
 
-
+<details>
+<summary>Command to list versions</summary>
+<pre>apt list strongswan 2>&1 | grep -v "Listing" | grep -v "CLI" && ruby --version && echo Puppet: $(puppet --version)</pre>
+</details>
 
 
 # Usage
