@@ -21,7 +21,7 @@ every possible StrongSwan option, it's not.
 
 ... time passes ...
 
-It's now the future, 2024 to be precise. Some stuff happened between 2016 and
+**It's now the future, 2024 to be precise.** Some stuff happened between 2016 and
 now, but I wouldn't look too deeply into it if I were you... just pretend
 everything is fine.
 
@@ -75,7 +75,7 @@ Tested and confirmed on:
 but external dependency `thias-sysctl` appears to have been abandoned. Alternative
 package `puppet-augeasproviders_sysctl` does not currently work for `24.04` might be
 usable in future, but for now, re-enable legacy facts with:
-`echo "include_legacy_facts=true" > /etc/puppetlabs/puppet/puppet.conf`
+`echo "include_legacy_facts=true" >> /etc/puppetlabs/puppet/puppet.conf`
 * Ubuntu 22.04 [Server]
      - strongswan/jammy-updates,jammy-security 5.9.5-2ubuntu2.2 all
      - ruby 3.0.2p107 (2021-07-07 revision 0db68f0233) [x86_64-linux-gnu]
@@ -302,7 +302,7 @@ The following is an example of how to do this:
     gem install puppet
 
     ## Ubuntu 24.04 only:
-    echo "include_legacy_facts=true" > /etc/puppetlabs/puppet/puppet.conf
+    echo "include_legacy_facts=true" >> /etc/puppetlabs/puppet/puppet.conf
     
     puppet module install jethrocarr/roadwarrior
     
