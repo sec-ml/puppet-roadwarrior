@@ -66,10 +66,20 @@ Uncertain on above compatibility.
 
 Tested and confirmed on:
 
+* Ubuntu 24.04 [Server]
+     - strongswan/noble,now 5.9.13-2ubuntu4 all [installed]
+     - ruby 3.2.3 (2024-01-18 revision 52bb2ac0a6) [x86_64-linux-gnu]
+     - Puppet: 8.6.0
+     - NOTE: Puppet 8.x is installed when using `gem install puppet` & Puppet
+8 has legacy facts disabled by default. Built-in legacy facts have been removed,
+but external dependency `thias-sysctl` appears to have been abandoned. Alternative
+package `puppet-augeasproviders_sysctl` does not currently work for `24.04` might be
+usable in future, but for now, re-enable legacy facts with:
+`echo "include_legacy_facts=true" > /etc/puppetlabs/puppet/puppet.conf`
 * Ubuntu 22.04 [Server]
      - strongswan/jammy-updates,jammy-security 5.9.5-2ubuntu2.2 all
      - ruby 3.0.2p107 (2021-07-07 revision 0db68f0233) [x86_64-linux-gnu]
-     - Puppet: 7.30.0  
+     - Puppet: 7.30.0
 
 <details>
 <summary>Command to list versions</summary>
@@ -284,12 +294,15 @@ the module and then running your config directly from a file.
 
 The following is an example of how to do this:
 
-    Note: apt-get install puppet installs an older version of Puppet (v5.x).
+    ## Note: apt-get install puppet installs an older version of Puppet (v5.x).
 
     apt-get update && apt-get upgrade -y
     apt-get install ruby
 
     gem install puppet
+
+    ## Ubuntu 24.04 only:
+    echo "include_legacy_facts=true" > /etc/puppetlabs/puppet/puppet.conf
     
     puppet module install jethrocarr/roadwarrior
     
