@@ -23,7 +23,7 @@ class roadwarrior::params {
   # Name the VPN based on the hostname by default. This name is then used to
   # populate all the certs that is generated, so pick a name you wish to keep,
   # since changing means re-generating all the client certs/config.
-  $vpn_name = $::fqdn
+  $vpn_name = $::facts['fqdn']
 
   # Default IP range for the VPN clients to use
   $vpn_range_v4 = '10.10.10.0/24'
