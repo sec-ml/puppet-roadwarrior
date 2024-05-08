@@ -20,7 +20,7 @@ class roadwarrior (
   assert_type(String, $vpn_dns_servers)
 
   # Compat checks
-  if ($::operatingsystem != "Debian" and $::operatingsystem != "Ubuntu") {
+  if ($::facts['os']['name'] != "Debian" and $::facts['os']['name'] != "Ubuntu") {
     fail("Sorry, only Debian or Ubuntu distributions are supported by the roadwarrior module at this time. PRs welcome")
   }
 
